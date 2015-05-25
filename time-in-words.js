@@ -29,17 +29,17 @@ function getTime(time) {
     hours = 1;
 
   if (parts[1] == 0)
-    return toWord2(hours) + " o' clock";
+    return toWord(hours) + " o' clock";
   if (mins == 15)
-    return "quarter past " + toWord2(hours);
+    return "quarter past " + toWord(hours);
   if (mins == 30)
-    return "half past " + toWord2(hours);
+    return "half past " + toWord(hours);
   if (mins == 45)
-    return "quarter to " + toWord2(hours);
+    return "quarter to " + toWord(hours);
   if (mins < 30)
-    return toWord2(mins) + " past " + toWord2(hours);
+    return toWord(mins) + " minutes past " + toWord(hours);
   if (mins > 30)
-    return toWord2(60 - mins) + " to " + toWord2(hours);
+    return toWord(60 - mins) + " minutes to " + toWord(hours);
 }
 
 var tests = "3:00,3:02,3:14,3:29,3:30,3:45,3:33,3:47,12:00".split(",");
